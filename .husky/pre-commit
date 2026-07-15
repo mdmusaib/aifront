@@ -11,4 +11,4 @@
 #   # Re-add the formatted files to staging
 #   echo "$STAGED_FILES" | xargs git add
 # fi
-bunx lint-staged
+npx lint-staged
