@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "bun run index.ts",
-    "prepare": "husky install"
+    "prepare": "husky",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -19,5 +20,10 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  }
 }
